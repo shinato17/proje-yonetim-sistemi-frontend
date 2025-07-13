@@ -5,7 +5,7 @@ export const getCurrentUser = () => {
   if (!token) return null;
 
   try {
-    return jwtDecode(token); // isim alanı doğrudan geliyor
+    return jwtDecode(token); 
   } catch (error) {
     return null;
   }

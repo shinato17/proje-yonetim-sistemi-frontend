@@ -140,8 +140,8 @@ function RolListesi() {
                 if (e.key === 'Enter') {
                   e.preventDefault();
                   setTimeout(() => {
-                    formRef.current?.requestSubmit(); // submit olayını düzgün başlatır
-                  }, 100); // select açma-kapama animasyonundan sonra çalışsın
+                    formRef.current?.requestSubmit(); 
+                  }, 100); 
                 }
               }}
               style={{

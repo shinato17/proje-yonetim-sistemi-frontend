@@ -12,10 +12,11 @@ function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('http://localhost:8080/api/auth/login', {
+      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/auth/login`, {
         eposta,
         sifre,
       });
+
 
       const token = res.data.token;
       localStorage.setItem('token', token);
