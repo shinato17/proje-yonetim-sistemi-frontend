@@ -1,0 +1,59 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #530C99;
+  color: #C3C3C3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Alt ve üst sabitlenir */
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #1F1F1F;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1F1F1F;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.sidebar button {
+  background: #1F1F1F;
+  color: #C3C3C3;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.sidebar button.active {
+  outline: 2px solid #C3C3C3;
+}
+
+.sidebar button.logout {
+  background: #880015;
+  color: #C3C3C3;
+  margin: 0;
+}

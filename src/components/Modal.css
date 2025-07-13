@@ -1,0 +1,93 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #1F1F1F !important;
+  border: 2px solid #530C99;
+  padding: 20px;
+  border-radius: 10px;
+  width: 420px;
+  max-width: 95%;
+  color: #C3C3C3 !important;
+}
+
+.modal-title {
+  color: #530C99;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-form-row label {
+  color: #530C99;
+  font-weight: bold;
+}
+
+.modal-form-row input,
+.modal-form-row textarea,
+.modal-form-row select {
+  background-color: #1F1F1F;
+  border: 1px solid #530C99;
+  color: #C3C3C3;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal-form-row select option {
+  background-color: #1F1F1F;
+  color: #C3C3C3;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-iptal {
+  background-color: #880015;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-onay {
+  background-color: #530C99;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 16px;
+}
+
+table th,
+table td {
+  border: 1px solid #530C99;
+  padding: 8px;
+  text-align: left;
+  color: #C3C3C3;
+}

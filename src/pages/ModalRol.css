@@ -1,0 +1,24 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.modal-content {
+  background-color: #1F1F1F;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #530C99;
+  color: #C3C3C3;
+  width: 360px;
+  pointer-events: auto;
+}
