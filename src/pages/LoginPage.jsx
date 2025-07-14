@@ -17,7 +17,6 @@ function LoginPage() {
         sifre,
       });
 
-
       const token = res.data.token;
       localStorage.setItem('token', token);
 
@@ -26,6 +25,7 @@ function LoginPage() {
 
       navigate('/dashboard');
     } catch (err) {
+      console.error('Giriş Hatası:', err.response?.data || err.message);
       alert('Giriş başarısız. Bilgileri kontrol edin.');
     }
   };
