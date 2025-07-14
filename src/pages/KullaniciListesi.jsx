@@ -317,16 +317,21 @@ function KullaniciListesi() {
                 onChange={(e) => setData(prev => ({ ...prev, rolId: e.target.value }))}
                 required
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    e.preventDefault();
-                    setTimeout(() => {
-                      formRef.current?.requestSubmit();
-                    }, 100);
-                  }
-                }}
-                onBlur={() => {
-                  if (data.rolId) formRef.current?.requestSubmit();
-                }}
+                        if (e.key === 'Enter') {
+    e.preventDefault();
+    if (!formRef.current.submittedOnce) {
+      formRef.current.submittedOnce = true;
+      formRef.current?.requestSubmit();
+    }
+  }
+}}
+onBlur={() => {
+  if (data.rolId && !formRef.current.submittedOnce) {
+    formRef.current.submittedOnce = true;
+    formRef.current?.requestSubmit();
+  }
+}}
+
                 style={{
                   padding: '8px',
                   borderRadius: '4px',
