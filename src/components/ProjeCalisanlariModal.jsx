@@ -89,12 +89,12 @@ function ProjeCalisanlariModal({ proje, onKapat }) {
         <p><strong>Açıklama:</strong> {proje.aciklama}</p>
 
         {calisanlar.length === 0 ? (
-          <p style={{ color: 'red', marginTop: '1rem' }}>
+          <p style={{ color: 'var(--primary-color)', marginTop: '1rem' }}>
             Bu projeye hiçbir çalışan atanmamıştır.
           </p>
         ) : (
-          <table border={1} cellPadding={8} style={{ width: '100%', borderColor: '#530C99' }}>
-            <thead style={{ backgroundColor: '#530C99', color: '#1F1F1F' }}>
+          <table border={1} cellPadding={8} style={{ width: '100%', borderColor: 'var(--primary-color)' }}>
+            <thead style={{ backgroundColor: 'var(--primary-color)', color: 'var(--text-color)' }}>
               <tr>
                 <th>Çalışan Adı</th>
                 <th>Rolü</th>
@@ -108,7 +108,7 @@ function ProjeCalisanlariModal({ proje, onKapat }) {
                   <td>{item.rol.isim}</td>
                   <td>
                     <button onClick={() => handleSil(item.id)} className="btn-iptal">
-                      <MdCancelPresentation size={18} color="#C3C3C3" />
+                      <MdCancelPresentation size={18} color="var(--text-color)" />
                     </button>
                   </td>
                 </tr>
@@ -117,7 +117,7 @@ function ProjeCalisanlariModal({ proje, onKapat }) {
           </table>
         )}
 
-        <h4 style={{ marginTop: '2rem', color: '#530C99' }}>Yeni Çalışan Ata</h4>
+        <h4 style={{ marginTop: '2rem', color: 'var(--primary-color)' }}>Yeni Çalışan Ata</h4>
         <div className="modal-form">
           <div className="modal-form-row">
             <label>Kullanıcı Seç:</label>
@@ -148,10 +148,10 @@ function ProjeCalisanlariModal({ proje, onKapat }) {
 
           <div className="modal-buttons">
             <button type="button" onClick={onKapat} className="btn-iptal">
-              <MdCancelPresentation size={20} color="#C3C3C3" />
+              <MdCancelPresentation size={20} color="var(--text-color)" />
             </button>
             <button ref={ekleBtnRef} onClick={handleEkle} className="btn-onay">
-              <GiConfirmed size={20} color="#C3C3C3" />
+              <GiConfirmed size={20} color="var(--text-color)" />
             </button>
           </div>
         </div>

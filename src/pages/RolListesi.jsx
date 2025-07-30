@@ -117,19 +117,28 @@ function RolListesi() {
         zIndex: 1000
       }}>
         <div style={{
-          backgroundColor: '#1F1F1F',
+          backgroundColor: 'var(--background-color)',
           padding: '20px',
           borderRadius: '10px',
-          border: '2px solid #530C99',
-          color: '#C3C3C3',
+          border: '2px solid var(--primary-color)',
+          color: 'var(--text-color)',
           width: '360px',
           maxWidth: '90vw'
         }}>
-          <h3 style={{ color: '#530C99', textAlign: 'center', fontWeight: 'bold' }}>
+          <h3 style={{
+            color: 'var(--primary-color)',
+            textAlign: 'center',
+            fontWeight: 'bold'
+          }}>
             {isEdit ? "Rolü Güncelle" : "Yeni Rol Ekle"}
           </h3>
           <form ref={formRef} onSubmit={(e) => handleSubmit(e, isEdit)} style={{ marginTop: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', color: '#530C99', fontWeight: 'bold' }}>
+            <label style={{
+              display: 'block',
+              marginBottom: '8px',
+              color: 'var(--primary-color)',
+              fontWeight: 'bold'
+            }}>
               Rol Adı:
             </label>
             <input
@@ -148,19 +157,24 @@ function RolListesi() {
                 width: '100%',
                 padding: '8px',
                 borderRadius: '4px',
-                border: '1px solid #530C99',
-                backgroundColor: '#1F1F1F',
-                color: '#C3C3C3',
+                border: '1px solid var(--primary-color)',
+                backgroundColor: 'var(--background-color)',
+                color: 'var(--text-color)',
                 boxSizing: 'border-box'
               }}
               required
             />
-            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '20px' }}>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              gap: '10px',
+              marginTop: '20px'
+            }}>
               <button
                 type="button"
                 onClick={close}
                 style={{
-                  backgroundColor: '#880015',
+                  backgroundColor: '#880015', // Kırmızı değil, eski tonunda
                   border: 'none',
                   padding: '10px',
                   borderRadius: '6px',
@@ -169,12 +183,12 @@ function RolListesi() {
                   height: '40px'
                 }}
               >
-                <MdCancelPresentation size={24} color="#C3C3C3" />
+                <MdCancelPresentation size={24} color="var(--text-color)" />
               </button>
               <button
                 type="submit"
                 style={{
-                  backgroundColor: '#530C99',
+                  backgroundColor: 'var(--primary-color)',
                   border: 'none',
                   padding: '10px',
                   borderRadius: '6px',
@@ -183,7 +197,7 @@ function RolListesi() {
                   height: '40px'
                 }}
               >
-                <GiConfirmed size={24} color="#C3C3C3" />
+                <GiConfirmed size={24} color="var(--text-color)" />
               </button>
             </div>
           </form>
@@ -200,15 +214,15 @@ function RolListesi() {
       maxHeight: 'calc(100vh - 80px)',
       width: '100%',
       boxSizing: 'border-box',
-      color: '#C3C3C3'
+      color: 'var(--text-color)'
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-        <h2 style={{ color: '#C3C3C3' }}>Roller</h2>
+        <h2 style={{ color: 'var(--text-color)' }}>Roller</h2>
         <button
           onClick={() => setModalAcik(true)}
           style={{
-            backgroundColor: '#530C99',
-            color: '#C3C3C3',
+            backgroundColor: 'var(--primary-color)',
+            color: 'var(--text-color)',
             border: 'none',
             padding: '6px 20px',
             height: '36px',
@@ -225,7 +239,10 @@ function RolListesi() {
       </div>
 
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead style={{ backgroundColor: '#530C99', color: '#1F1F1F' }}>
+        <thead style={{
+          backgroundColor: 'var(--primary-color)',
+          color: 'var(--background-color)'
+        }}>
           <tr>
             <th style={{ padding: '10px', cursor: 'pointer' }} onClick={toggleSirala}>
               Rol Adı {getSortSymbol()}
@@ -236,7 +253,7 @@ function RolListesi() {
         </thead>
         <tbody>
           {roller.map(r => (
-            <tr key={r.id} style={{ borderBottom: '1px solid #530C99' }}>
+            <tr key={r.id} style={{ borderBottom: '1px solid var(--primary-color)' }}>
               <td style={{ padding: '10px' }}>{r.isim}</td>
               <td style={{ padding: '10px', textAlign: 'center' }}>
                 {(r.isim === "Yönetici" || r.isim === "Çalışan") ? (
@@ -248,7 +265,7 @@ function RolListesi() {
                       background: 'none',
                       border: 'none',
                       cursor: 'pointer',
-                      color: '#530C99'
+                      color: 'var(--primary-color)'
                     }}
                   >
                     <IoPencil size={20} />
@@ -265,7 +282,7 @@ function RolListesi() {
                       background: 'none',
                       border: 'none',
                       cursor: 'pointer',
-                      color: '#530C99'
+                      color: 'var(--primary-color)'
                     }}
                   >
                     <IoTrashBinOutline size={20} />

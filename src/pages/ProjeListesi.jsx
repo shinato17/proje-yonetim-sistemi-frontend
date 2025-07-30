@@ -107,13 +107,13 @@ function ProjeListesi() {
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-        <h2 style={{ color: '#C3C3C3' }}>Projeler</h2>
+        <h2 style={{ color: 'var(--text-color)' }}>Projeler</h2>
         {isYonetici && (
           <button
             onClick={() => setEkleModaliAcik(true)}
             style={{
-              backgroundColor: '#530C99',
-              color: '#C3C3C3',
+              backgroundColor: 'var(--primary-color)',
+              color: 'var(--text-color)',
               border: 'none',
               padding: '6px 20px',
               height: '36px',
@@ -131,7 +131,7 @@ function ProjeListesi() {
       </div>
 
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead style={{ backgroundColor: '#530C99', color: '#1F1F1F' }}>
+        <thead style={{ backgroundColor: 'var(--primary-color)', color: 'var(--background-color)' }}>
           <tr>
             <th style={{ padding: '10px', cursor: 'pointer' }} onClick={() => toggleSirala('isim')}>
               Proje Adı {getSortSymbol('isim')}
@@ -152,7 +152,7 @@ function ProjeListesi() {
         </thead>
         <tbody>
           {siraliProjeler.map((proje) => (
-            <tr key={proje.id} style={{ borderBottom: '1px solid #530C99', color: '#C3C3C3' }}>
+            <tr key={proje.id} style={{ borderBottom: '1px solid var(--primary-color)', color: 'var(--text-color)' }}>
               <td style={{ padding: '10px' }}>{proje.isim}</td>
               <td style={{ padding: '10px' }}>{proje.aciklama}</td>
               <td style={{ padding: '10px' }}>{proje.durum}</td>
@@ -160,21 +160,21 @@ function ProjeListesi() {
               {isYonetici && (
                 <td style={{ padding: '10px', textAlign: 'center' }}>
                   <button onClick={() => setSeciliProjeCalisanlari(proje)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                    <LuUsersRound size={22} color="#530C99" />
+                    <LuUsersRound size={22} color="var(--primary-color)" />
                   </button>
                 </td>
               )}
               {isYonetici && (
                 <td style={{ padding: '10px', textAlign: 'center' }}>
                   <button onClick={() => handleGuncelle(proje)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                    <IoPencil size={20} color="#530C99" />
+                    <IoPencil size={20} color="var(--primary-color)" />
                   </button>
                 </td>
               )}
               {isYonetici && (
                 <td style={{ padding: '10px', textAlign: 'center' }}>
                   <button onClick={() => handleSil(proje.id)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                    <IoTrashBinOutline size={20} color="#530C99" />
+                    <IoTrashBinOutline size={20} color="var(--primary-color)" />
                   </button>
                 </td>
               )}

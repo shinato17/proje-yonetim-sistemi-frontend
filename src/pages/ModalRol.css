@@ -14,11 +14,11 @@
 }
 
 .modal-content {
-  background-color: #1F1F1F;
+  background-color: var(--background-color);
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #530C99;
-  color: #C3C3C3;
+  border: 2px solid var(--primary-color);
+  color: var(--text-color);
   width: 360px;
   pointer-events: auto;
 }

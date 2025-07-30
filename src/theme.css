@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #530C99;
+  --background-color: #ffffff;
+  --text-color: #1F1F1F;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9b59b6;
+  --background-color: #1F1F1F;
+  --text-color: #C3C3C3;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

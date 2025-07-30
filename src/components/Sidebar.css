@@ -1,59 +1,85 @@
 .sidebar {
   width: 260px;
   height: 100vh;
-  background-color: #530C99;
-  color: #C3C3C3;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  padding: 30px 20px;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
 .sidebar-top {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sidebar-title {
   font-size: 34px;
   font-weight: bold;
-  color: #1F1F1F;
-  margin-bottom: 40px;
+  color: var(--text-color);
+  margin-bottom: 30px;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .sidebar-user {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #1F1F1F;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .sidebar button {
-  background: #1F1F1F;
-  color: #C3C3C3;
-  border: none;
-  padding: 16px;
+  background-color: var(--button-bg);
+  color: var(--button-color);
   font-size: 16px;
+  padding: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
   border-radius: 6px;
-  margin-bottom: 16px;
   width: 100%;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar button.active {
-  outline: 2px solid #C3C3C3;
+box-shadow: 0 0 0 2px var(--text-color) inset;
+
 }
 
-.sidebar button.logout {
-  background: #880015;
-  color: #C3C3C3;
-  margin: 0;
+.sidebar .logout {
+  background-color: #880015;
+  color: white;
+}
+
+.sidebar .logout svg {
+  color: white;
+}
+
+:root[data-theme='light'] {
+  --text-color: #111;
+  --button-bg: #eee;
+  --button-color: #111;
+}
+
+:root[data-theme='dark'] {
+  --text-color: #fff;
+  --button-bg: #1f1f1f;
+  --button-color: #fff;
 }

@@ -165,17 +165,17 @@ function KullaniciListesi() {
         zIndex: 1000
       }}>
         <div style={{
-          backgroundColor: '#1F1F1F',
+          backgroundColor: 'var(--background-color)',
           padding: '20px',
           borderRadius: '10px',
-          border: '2px solid #530C99',
-          color: '#C3C3C3',
+          border: '2px solid var(--primary-color)',
+          color: 'var(--text-color)',
           width: '420px',
           maxWidth: '90vw'
         }}>
           <h3 style={{ 
             marginTop: 0, 
-            color: '#530C99', 
+            color: 'var(--primary-color)', 
             fontWeight: 'bold', 
             textAlign: 'center',
             paddingBottom: '10px'
@@ -184,7 +184,7 @@ function KullaniciListesi() {
           </h3>
           <form ref={formRef} onSubmit={submitHandler} style={{ marginTop: '20px' }}>
             <div style={{ marginBottom: '15px', position: 'relative' }}>
-              <label style={{ color: '#530C99', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
+              <label style={{ color: 'var(--primary-color)', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
                 İsim:
                 <span style={{
                   fontSize: '10px',
@@ -207,9 +207,9 @@ function KullaniciListesi() {
                 style={{
                   padding: '8px',
                   borderRadius: '4px',
-                  border: '1px solid #530C99',
-                  backgroundColor: '#1F1F1F',
-                  color: '#C3C3C3',
+                  border: '1px solid var(--primary-color)',
+                  backgroundColor: 'var(--background-color)',
+                  color: 'var(--text-color)',
                   width: '100%',
                   boxSizing: 'border-box'
                 }}
@@ -218,7 +218,7 @@ function KullaniciListesi() {
             </div>
             
             <div style={{ marginBottom: '15px', position: 'relative' }}>
-              <label style={{ color: '#530C99', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
+              <label style={{ color: 'var(--primary-color)', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
                 E-Posta:
                 <span style={{
                   fontSize: '10px',
@@ -242,9 +242,9 @@ function KullaniciListesi() {
                 style={{
                   padding: '8px',
                   borderRadius: '4px',
-                  border: '1px solid #530C99',
-                  backgroundColor: '#1F1F1F',
-                  color: '#C3C3C3',
+                  border: '1px solid var(--primary-color)',
+                  backgroundColor: 'var(--background-color)',
+                  color: 'var(--text-color)',
                   width: '100%',
                   boxSizing: 'border-box'
                 }}
@@ -253,7 +253,7 @@ function KullaniciListesi() {
             </div>
             
             <div style={{ marginBottom: '15px', position: 'relative' }}>
-              <label style={{ color: '#530C99', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
+              <label style={{ color: 'var(--primary-color)', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
                 Şifre:
                 <span style={{
                   fontSize: '10px',
@@ -278,9 +278,9 @@ function KullaniciListesi() {
                   style={{
                     padding: '8px',
                     borderRadius: '4px',
-                    border: '1px solid #530C99',
-                    backgroundColor: '#1F1F1F',
-                    color: '#C3C3C3',
+                    border: '1px solid var(--primary-color)',
+                    backgroundColor: 'var(--background-color)',
+                    color: 'var(--text-color)',
                     width: '100%',
                     paddingRight: '40px',
                     boxSizing: 'border-box'
@@ -296,7 +296,7 @@ function KullaniciListesi() {
                     transform: 'translateY(-50%)',
                     background: 'none',
                     border: 'none',
-                    color: '#530C99',
+                    color: 'var(--primary-color)',
                     cursor: 'pointer'
                   }}
                   onClick={() => setShowPassword(!showPassword)}
@@ -307,7 +307,7 @@ function KullaniciListesi() {
             </div>
             
             <div style={{ marginBottom: '15px' }}>
-              <label style={{ color: '#530C99', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
+              <label style={{ color: 'var(--primary-color)', fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
                 Rol Seç:
               </label>
               <select
@@ -335,9 +335,9 @@ onBlur={() => {
                 style={{
                   padding: '8px',
                   borderRadius: '4px',
-                  border: '1px solid #530C99',
-                  backgroundColor: '#1F1F1F',
-                  color: '#C3C3C3',
+                  border: '1px solid var(--primary-color)',
+                  backgroundColor: 'var(--background-color)',
+                  color: 'var(--text-color)',
                   width: '100%',
                   boxSizing: 'border-box',
                   appearance: 'none',
@@ -365,7 +365,7 @@ onBlur={() => {
                   onClick={isEdit ? () => setDuzenlenen(null) : () => setModalAcik(false)}
                   style={{
                     backgroundColor: '#880015',
-                    color: '#C3C3C3',
+                    color: 'var(--text-color)',
                     border: 'none',
                     padding: '10px',
                     borderRadius: '6px',
@@ -381,13 +381,13 @@ onBlur={() => {
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#a0001a'}
                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#880015'}
                 >
-                  <MdCancelPresentation color="#C3C3C3" size={24} />
+                  <MdCancelPresentation color="var(--text-color)" size={24} />
                 </button>
                 <button 
                   type="submit"
                   style={{
-                    backgroundColor: '#530C99',
-                    color: '#C3C3C3',
+                    backgroundColor: 'var(--primary-color)',
+                    color: 'var(--text-color)',
                     border: 'none',
                     padding: '10px',
                     borderRadius: '6px',
@@ -401,9 +401,9 @@ onBlur={() => {
                   }}
                   title={isEdit ? "Kaydet" : "Ekle"}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#6a1cb3'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#530C99'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-color)'}
                 >
-                  <GiConfirmed color="#C3C3C3" size={24} />
+                  <GiConfirmed color="var(--text-color)" size={24} />
                 </button>
               </div>
             </div>
@@ -424,16 +424,16 @@ onBlur={() => {
       maxHeight: 'calc(100vh - 80px)',
       width: '100%',
       boxSizing: 'border-box',
-      color: '#C3C3C3'
+      color: 'var(--text-color)'
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-        <h2 style={{ color: '#C3C3C3' }}>Kullanıcı Listesi</h2>
+        <h2 style={{ color: 'var(--text-color)' }}>Kullanıcı Listesi</h2>
         {isYonetici && (
           <button
             onClick={() => setModalAcik(true)}
             style={{
-              backgroundColor: '#530C99',
-              color: '#C3C3C3',
+              backgroundColor: 'var(--primary-color)',
+              color: 'var(--text-color)',
               border: 'none',
               padding: '6px 20px',
               height: '36px',
@@ -451,7 +451,7 @@ onBlur={() => {
       </div>
 
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead style={{ backgroundColor: '#530C99', color: '#1F1F1F' }}>
+        <thead style={{ backgroundColor: 'var(--primary-color)', color: 'var(--background-color)' }}>
           <tr>
             <th 
               style={{ padding: '10px', cursor: 'pointer' }} 
@@ -477,7 +477,7 @@ onBlur={() => {
         </thead>
         <tbody>
           {siraliKullanicilar.map(k => (
-            <tr key={k.id} style={{ borderBottom: '1px solid #530C99' }}>
+            <tr key={k.id} style={{ borderBottom: '1px solid var(--primary-color)' }}>
               <td style={{ padding: '10px' }}>{k.isim}</td>
               <td style={{ padding: '10px' }}>{k.eposta}</td>
               <td style={{ padding: '10px' }}>{k.rol?.isim}</td>
@@ -488,7 +488,7 @@ onBlur={() => {
                     background: 'none', 
                     border: 'none', 
                     cursor: 'pointer',
-                    color: '#530C99'
+                    color: 'var(--primary-color)'
                   }}
                 >
                   <IoPencil size={20} />
@@ -501,7 +501,7 @@ onBlur={() => {
                     background: 'none', 
                     border: 'none', 
                     cursor: 'pointer',
-                    color: '#530C99'
+                    color: 'var(--primary-color)'
                   }}
                 >
                   <IoTrashBinOutline size={20} />

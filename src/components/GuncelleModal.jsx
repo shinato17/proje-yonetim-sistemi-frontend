@@ -115,10 +115,10 @@ function GuncelleModal({ proje, onKapat, onGuncelle }) {
 
           <div className="modal-buttons">
             <button type="button" className="btn-iptal" onClick={onKapat}>
-              <MdCancelPresentation size={20} color="#C3C3C3" />
+              <MdCancelPresentation size={20} color="var(--text-color)" />
             </button>
             <button type="submit" className="btn-onay">
-              <GiConfirmed size={20} color="#C3C3C3" />
+              <GiConfirmed size={20} color="var(--text-color)" />
             </button>
           </div>
         </form>

@@ -52,7 +52,7 @@ function LoginPage() {
         <h2>Giriş Yap</h2>
 
         <div className="input-wrapper">
-          <CiMail size={20} color="#530C99" />
+          <CiMail size={20} color="var(--primary-color)" />
           <input
             type="email"
             placeholder="E-posta"
@@ -63,7 +63,7 @@ function LoginPage() {
         </div>
 
         <div className="input-wrapper">
-          <CiLock size={20} color="#530C99" />
+          <CiLock size={20} color="var(--primary-color)" />
           <input
             ref={sifreRef}
             type="password"

@@ -13,17 +13,17 @@
 }
 
 .modal-content {
-  background-color: #1F1F1F !important;
-  border: 2px solid #530C99;
+  background-color: var(--background-color) !important;
+  border: 2px solid var(--primary-color);
   padding: 20px;
   border-radius: 10px;
   width: 420px;
   max-width: 95%;
-  color: #C3C3C3 !important;
+  color: var(--text-color) !important;
 }
 
 .modal-title {
-  color: #530C99;
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -35,24 +35,24 @@
 }
 
 .modal-form-row label {
-  color: #530C99;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
 .modal-form-row input,
 .modal-form-row textarea,
 .modal-form-row select {
-  background-color: #1F1F1F;
-  border: 1px solid #530C99;
-  color: #C3C3C3;
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-color);
   padding: 8px;
   border-radius: 4px;
   font-size: 14px;
 }
 
 .modal-form-row select option {
-  background-color: #1F1F1F;
-  color: #C3C3C3;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .modal-buttons {
@@ -63,15 +63,14 @@
 }
 
 .btn-iptal {
-  background-color: #880015;
-  border: none;
+  background-color: #880015; 
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .btn-onay {
-  background-color: #530C99;
+  background-color: var(--primary-color);
   border: none;
   padding: 8px 12px;
   cursor: pointer;
@@ -86,8 +85,8 @@ table {
 
 table th,
 table td {
-  border: 1px solid #530C99;
+  border: 1px solid var(--primary-color);
   padding: 8px;
   text-align: left;
-  color: #C3C3C3;
+  color: var(--text-color);
 }
