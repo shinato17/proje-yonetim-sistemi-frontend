@@ -4,6 +4,7 @@ import ProjeListesi from './ProjeListesi';
 import KullaniciListesi from './KullaniciListesi';
 import RolListesi from './RolListesi';
 import AyarlarSayfasi from './AyarlarSayfasi';
+import MesajlarSayfasi from './MesajlarSayfasi'; // Mesajlar sayfasını import ettik
 
 function DashboardPage() {
   const [aktifSayfa, setAktifSayfa] = useState('');
@@ -24,6 +25,8 @@ function DashboardPage() {
         return <RolListesi />;
       case 'ayarlar':
         return <AyarlarSayfasi />;
+      case 'mesajlar':
+        return <MesajlarSayfasi />;
       default:
         return (
           <h1 style={{ fontSize: '32px', textAlign: 'center', transition: 'color 0.4s ease' }}>
@@ -36,14 +39,17 @@ function DashboardPage() {
   return (
     <div style={{ display: 'flex', height: '100vh', backgroundColor: 'var(--background-color)' }}>
       <Sidebar aktifSayfa={aktifSayfa} setAktifSayfa={setAktifSayfa} />
-      <div style={{
-        flexGrow: 1,
-        padding: '40px',
-        color: 'var(--text-color)',
-        display: 'flex',           
-        justifyContent: 'center',   
-        alignItems: 'center'        
-      }}>
+      <div
+        style={{
+          flexGrow: 1,
+          padding: '40px',
+          color: 'var(--text-color)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          overflowY: 'auto', // mesajlar ve diğer içerik taşarsa scroll için
+        }}
+      >
         {renderSayfa()}
       </div>
     </div>

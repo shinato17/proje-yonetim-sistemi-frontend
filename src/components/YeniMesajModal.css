@@ -1,0 +1,6 @@
+.modal-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); display:flex; justify-content:center; align-items:center; z-index:999; }
+.modal { background: var(--button-bg); color: var(--text-color); padding:20px; border-radius:6px; width:300px; max-height:80vh; overflow-y:auto; }
+.modal-kisi-listesi { max-height:300px; overflow-y:auto; margin-top:10px; }
+.modal-kisi-item { padding:10px; cursor:pointer; border-bottom:1px solid var(--primary-color); }
+.modal-kisi-item:hover { background-color: rgba(var(--primary-color-rgb),0.2); }
+.modal-iptal { margin-top:15px; background-color: var(--button-bg); color: var(--text-color); border:none; padding:8px 12px; border-radius:4px; cursor:pointer; width:100%; display:flex; align-items:center; justify-content:center; gap:6px; }

@@ -3,11 +3,12 @@ import { CiBoxList, CiLogout, CiUser } from 'react-icons/ci';
 import { FiUsers } from 'react-icons/fi';
 import { LiaAddressCard } from 'react-icons/lia';
 import { RiSettings3Line } from 'react-icons/ri';
+import { IoChatboxEllipsesOutline, IoNotificationsCircleOutline } from 'react-icons/io5';
 import './Sidebar.css';
 import { getCurrentUser } from '../auth/useAuth';
 import { useNavigate } from 'react-router-dom';
 
-function Sidebar({ aktifSayfa, setAktifSayfa }) {
+function Sidebar({ aktifSayfa, setAktifSayfa, yeniMesajVar }) {
   const navigate = useNavigate();
   const user = getCurrentUser();
   const roller = user?.authorities?.map(a => a.authority) || [];
@@ -59,6 +60,22 @@ function Sidebar({ aktifSayfa, setAktifSayfa }) {
             </button>
           </>
         )}
+
+        <button
+          className={aktifSayfa === 'mesajlar' ? 'active' : ''}
+          onClick={() => setAktifSayfa('mesajlar')} // sayfa yenilemeden sekme açıyor
+          style={{ display: 'flex', alignItems: 'center' }}
+        >
+          <IoChatboxEllipsesOutline size={20} color="var(--text-color)" />
+          <span style={{ marginLeft: '8px' }}>Mesajlar</span>
+          {yeniMesajVar && (
+            <IoNotificationsCircleOutline
+              size={16}
+              color="red"
+              style={{ marginLeft: '6px' }}
+            />
+          )}
+        </button>
       </div>
 
       <div className="sidebar-bottom">

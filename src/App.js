@@ -24,7 +24,7 @@ function App() {
             }
           />
 
-          {/* Korunan kullanıcı listesi */}
+          {/* Kullanıcı listesi ayrı route olarak kalabilir ama artık mesajlar Dashboard içinde */}
           <Route
             path="/kullanicilar"
             element={
